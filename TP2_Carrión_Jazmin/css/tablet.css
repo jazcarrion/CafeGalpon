@@ -1,0 +1,1033 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/*HEADER*/
+header{  
+    display: flex;
+    height: 70px;
+    background-color: #311102;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#logo{
+    display: flex;
+    align-items: center;
+}
+
+#logo img{
+    height: 50px;
+    margin-right: 10px;
+}
+
+h1{
+    visibility: hidden;
+    position: absolute;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin-left: -10%;
+}
+
+nav ul li{
+    display: inline-block;
+    margin-left: 15px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+    color: #AB9679;
+}
+
+
+/*BANNER*/
+#banner{
+    width: 100%;
+}
+
+
+/*VIDEO*/
+#video{
+    background-color: #EBDECC;
+    padding: 3%;
+}
+
+iframe{
+    width: 100%;
+}
+
+
+#fila-video{
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+}
+
+#video h2{
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 20px;
+    font-size: 29px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    color: #422010;
+}
+
+#texto{
+    font-family: "Montserrat", sans-serif;
+    text-align: justify;
+    font-size: 10pt;
+    width: 85%;
+    margin-left: 38px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 22px;
+}
+
+
+/*HISTORIA*/
+#historia {
+    position: relative;
+    background-image: url('../imgs/Fondo\ Granos\ de\ cafe.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    padding: 80px 10px;
+    text-align: justify;
+}
+
+#historia #contenidoHistoria {
+    background-color: #AB9679; 
+    padding: 10px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+#historia h2,
+#historia p {
+    padding-top: 28px;
+    padding-bottom: 28px;
+}
+
+#contenidoHistoria h2{   
+    text-align: center;
+    color: #EBDECC;
+    font-size: 25px;
+    padding-bottom: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+
+#contenidoHistoria p{
+    color: black;
+    font-size: 14px;
+    line-height: 22px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+}
+
+
+/* PRODUCTOS */
+#productos {
+    background-color: #FFFDFA;
+    text-align: center;
+    padding: 80px;
+}
+
+#productos article {
+    display: inline-block;
+    background-color: #FAF7F7;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    padding-bottom: 40px;
+    width: 200px;
+    vertical-align: top;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Efecto de hover para agrandar el producto y cambiar el color de fondo */
+#productos article:hover {
+    transform: scale(1.09);
+    background-color: #EDEDED;
+}
+
+#productos img {
+    width: 180px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#productos h2{
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+}
+
+#productos p {
+    margin: 10px 0; 
+    margin-bottom: 28px;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+
+#productos p#estrellas {
+    color: #AB9679;
+}
+
+/* espacio entre el precio y el botón */
+#productos div {
+    margin-top: 20px; 
+}
+
+/*BOTON COMPRAR*/
+#productos div a {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+#productos div a:hover {
+    background-color: #AB9679;
+}
+
+
+/*BOTON VER MAS*/
+#productos div #verMas{
+    background-color: #AB9679;
+}
+
+#productos div #verMas:hover{
+    background-color: #311102;
+}
+
+
+
+
+
+/*VENTANA PRODUCTO 1*/
+#prod1{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    margin-top: 400%;
+}
+
+#prod1:target{
+    display: block;
+    position: absolute;
+}
+
+#prod1 p{
+    margin-left: -20%;
+    margin-top: 20%;
+    width: 120%;
+    margin-bottom: 10%;
+}
+
+#prod1 a{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border-radius: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    margin-left: 35%;
+}
+
+#contenido h2{
+    font-family: "Montserrat", sans-serif;
+    font-size: 20pt;
+    margin-left: 10px;
+}
+
+#contenido{
+    height: 400px;
+    margin-top: 100px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    width: 50%;
+}
+
+#modal, #contenido{
+    margin: auto;
+    position: relative;
+    text-align: justify;
+    width: 80%;
+}
+
+#contenido main{
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 550px;
+}
+
+#contenido header{
+    background-color: black;
+    color: white;
+    font-size: 20pt;
+    width: 95%;
+}
+
+#contenido .cerrar{
+   text-decoration: none;
+   float: right; 
+   color: white;
+   margin-left: 2%;
+   font-size: 9pt;
+}
+
+#contenido p{
+    width: 80%;
+    text-align: justify;
+    margin-left: 10%;
+    font-size: 10pt;
+}
+
+#contenido figure img{
+    height: 300px;
+    margin-left: 5%;
+    margin-bottom: -50px;
+}
+
+#flex1{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/*VENTANA PRODUCTO 2*/
+#prod2{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    margin-top: 500%;
+}
+
+#prod2:target{
+    display: block;
+    position: absolute;
+}
+
+#prod2 p{
+    margin-left: -20%;
+    margin-top: 20%;
+    width: 120%;
+    margin-bottom: 10%;
+}
+
+#prod2 a{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border-radius: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    margin-left: 37%;
+}
+
+
+#contenido h2{
+    font-family: "Montserrat", sans-serif;
+    font-size: 20pt;
+    margin-left: 10px;
+}
+
+#contenido{
+    height: 400px;
+    margin-top: 100px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    width: 50%;
+}
+
+#modal, #contenido{
+    margin: auto;
+    position: relative;
+    text-align: justify;
+    width: 80%;
+}
+
+#contenido main{
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 550px;
+}
+
+#contenido header{
+    background-color: black;
+    color: white;
+    font-size: 20pt;
+    width: 95%;
+}
+
+#contenido .cerrar{
+   text-decoration: none;
+   float: right; 
+   color: white;
+   margin-left: 2%;
+   font-size: 9pt;
+}
+
+#contenido p{
+    width: 50%;
+    text-align: justify;
+    margin-left: 10%;
+    font-size: 10pt;
+}
+
+#contenido figure img{
+    height: 300px;
+    margin-left: 5%;
+    margin-bottom: -50px;
+}
+
+
+
+
+/*VENTANA PRODUCTO 3*/
+#prod3{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    margin-top: 600%;
+}
+
+#prod3:target{
+    display: block;
+    position: absolute;
+}
+
+#prod3 p{
+    margin-left: -20%;
+    margin-top: 20%;
+    width: 120%;
+    margin-bottom: 10%;
+}
+
+#prod3 a{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border-radius: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    margin-left: 37%;
+}
+
+#contenido h2{
+    font-family: "Montserrat", sans-serif;
+    font-size: 20pt;
+    margin-left: 10px;
+}
+
+#contenido{
+    height: 400px;
+    margin-top: 100px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    width: 50%;
+}
+
+#modal, #contenido{
+    margin: auto;
+    position: relative;
+    text-align: justify;
+    width: 80%;
+}
+
+#contenido main{
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 550px;
+}
+
+#contenido header{
+    background-color: black;
+    color: white;
+    font-size: 20pt;
+    width: 95%;
+}
+
+#contenido .cerrar{
+   text-decoration: none;
+   float: right; 
+   color: white;
+   margin-left: 2%;
+   font-size: 9pt;
+}
+
+#contenido p{
+    width: 80%;
+    text-align: justify;
+    margin-left: 10%;
+    font-size: 10pt;
+}
+
+#contenido figure img{
+    height: 300px;
+    margin-left: 5%;
+    margin-bottom: -50px;
+}
+
+
+
+
+/*VENTANA PRODUCTO 4*/
+#prod4{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    margin-top: 700%;
+}
+
+#prod4:target{
+    display: block;
+    position: absolute;
+}
+
+#prod4 p{
+    margin-left: -20%;
+    margin-top: 20%;
+    width: 120%;
+    margin-bottom: 10%;
+}
+
+#prod4 a{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border-radius: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    margin-left: 37%;
+}
+
+#contenido h2{
+    font-family: "Montserrat", sans-serif;
+    font-size: 20pt;
+    margin-left: 10px;
+}
+
+#contenido{
+    height: 400px;
+    margin-top: 100px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    width: 50%;
+}
+
+#modal, #contenido{
+    margin: auto;
+    position: relative;
+    text-align: justify;
+    width: 80%;
+}
+
+#contenido main{
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 550px;
+}
+
+#contenido header{
+    background-color: black;
+    color: white;
+    font-size: 20pt;
+    width: 95%;
+}
+
+#contenido .cerrar{
+   text-decoration: none;
+   float: right; 
+   color: white;
+   margin-left: 2%;
+   font-size: 9pt;
+}
+
+#contenido p{
+    width: 80%;
+    text-align: justify;
+    margin-left: 10%;
+    font-size: 10pt;
+}
+
+#contenido figure img{
+    height: 300px;
+    margin-left: 5%;
+    margin-bottom: -50px;
+}
+
+
+
+
+
+
+
+/*FORMULARIO*/
+#suscripcion {
+    background-color: #D0B694;
+    text-align: center;
+    padding: 50px;
+}
+  
+#suscripcion h2{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    padding-bottom: 15px;
+    color: #392916;
+}
+
+#suscripcion p{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    padding-bottom: 20px;
+    font-size: 13px;
+}
+  
+/*Campo nombre y email uno al lado del otro*/
+.filas{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+option{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+  
+
+.columnas{
+    flex: 1;
+    margin-right: 10px;
+}
+  
+.tamaño{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /*calcula el tamaño total de un elemento e incluye bordes y relleno*/
+    box-sizing: border-box;
+}
+  
+.boton{
+    padding: 15px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 25px;
+}
+  
+.boton:hover {
+    background-color: #9D7A52;
+    color: black;
+}
+
+
+
+/* FOOTER */
+footer {
+    background-color: #30211b;
+    height: 180px;
+}
+
+#logoFooter img{
+    height: 65px;
+    padding-top: 2%;
+    padding-left: 5%;
+}
+
+#redesSociales{
+    display: flex;
+    flex-direction: row;
+    padding-left: 6%;
+}
+
+.iconos figure img{
+    width: 30px;
+    padding: 5px;
+}
+
+footer p{
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+
+
+
+
+
+/* CSS PRODUCTOS */
+
+/*CARATULA*/
+#fondoInicio{
+    position: relative;
+    background-image: url('../imgs/Fondo\ granos\ de\ cafe\ opaco.png'); 
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    text-align: justify;
+    height: 80px;
+}
+
+
+
+#fondoInicio h2{
+    text-align: center;
+    font-size: 60px;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 650;
+    padding-top: 40px;
+    color: white;
+}
+
+
+
+
+/*PRODUCTOS ORIGENES*/
+#productos {
+    background-color: #FFFDFA;
+    text-align: center;
+    padding: 80px;
+}
+
+#productos article {
+    display: inline-block;
+    background-color: #FAF7F7;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    padding-bottom: 40px;
+    width: 200px;
+    vertical-align: top;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Efecto de hover para agrandar el producto y cambiar el color de fondo */
+#productos article:hover {
+    transform: scale(1.09);
+    background-color: #EDEDED;
+}
+
+#productos img {
+    width: 180px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#productos h2{
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    color: black;
+    padding-bottom: 20px;
+}
+
+#productos p {
+    margin: 10px 0; 
+    margin-bottom: 28px;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+
+#productos p#estrellas {
+    color: #AB9679;
+}
+
+/* espacio entre el precio y el botón */
+#productos div {
+    margin-top: 20px; 
+}
+
+/*BOTON COMPRAR*/
+#productos div a {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+#productos div a:hover {
+    background-color: #AB9679;
+}
+
+
+
+
+
+/*PRODUCTOS GOLD*/
+#productos2 {
+    background-color: #FFFDFA;
+    text-align: center;
+}
+
+#productos2 article {
+    display: inline-block;
+    background-color: #FAF7F7;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    padding-bottom: 40px;
+    width: 200px;
+    vertical-align: top;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Efecto de hover para agrandar el producto y cambiar el color de fondo */
+#productos2 article:hover {
+    transform: scale(1.09);
+    background-color: #EDEDED;
+}
+
+#productos2 img {
+    width: 180px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#productos2 h2{
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    color: black;
+    padding-top: 0;
+    padding-bottom: 20px;
+}
+
+#productos2 p {
+    margin: 10px 0; 
+    margin-bottom: 28px;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+
+#productos2 p#estrellas {
+    color: #AB9679;
+}
+
+/* espacio entre el precio y el botón */
+#productos2 div {
+    margin-top: 20px; 
+}
+
+/*BOTON COMPRAR*/
+#productos2 div a {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+#productos2 div a:hover {
+    background-color: #AB9679;
+}
+
+
+/*PRODUCTOS CLASSIC*/
+#productos3 {
+    background-color: #FFFDFA;
+    text-align: center;
+    padding: 80px;
+}
+
+#productos3 article {
+    display: inline-block;
+    background-color: #FAF7F7;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    padding-bottom: 40px;
+    width: 200px;
+    vertical-align: top;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Efecto de hover para agrandar el producto y cambiar el color de fondo */
+#productos3 article:hover {
+    transform: scale(1.09);
+    background-color: #EDEDED;
+}
+
+#productos3 img {
+    width: 180px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#productos3 h2{
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    color: black;
+    padding-top: 0;
+    padding-bottom: 20px;
+}
+
+#productos3 p {
+    margin: 10px 0; 
+    margin-bottom: 28px;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+
+#productos3 p#estrellas {
+    color: #AB9679;
+}
+
+/* espacio entre el precio y el botón */
+#productos3 div {
+    margin-top: 20px; 
+}
+
+/*BOTON COMPRAR*/
+#productos3 div a {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+#productos3 div a:hover {
+    background-color: #AB9679;
+}
+
+
+
+
+
+
+/*CSS GRACIAS */
+
+
+#paralax{
+    position: relative;
+    background-image: url('../imgs/Fondo\ granos\ de\ cafe\ opaco.png'); 
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    text-align: justify;
+    height: 390px;
+}
+
+
+
+#paralax h2{
+    text-align: center;
+    font-size: 40px;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 900;
+    padding-top: 160px;
+    margin: 0;
+    color: white;
+}
+
+#paralax p{
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    margin: 15px;
+    color: white;
+}
+
+#boton{
+  display: block;
+  width: 50px;
+  text-decoration: none;
+  color: black;
+  background-color: #9D7A52;
+  border-radius: 25px;
+  padding: 15px;
+  margin-left: 41%;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+
+
+
+#boton:hover{
+    background-color: white;
+    color: black;
+}
